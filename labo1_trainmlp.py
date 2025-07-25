@@ -69,8 +69,8 @@ def main():
 
     # Transforms: ToTensor y flatten
     flat_tf = transforms.Compose([
-        transforms.ToTensor(),          # → [C,H,W]
-        transforms.Lambda(flatten_transform)  # → [C*H*W]
+        transforms.ToTensor(),         
+        transforms.Lambda(flatten_transform)  
     ])
 
     # Leer CSV y split estratificado
@@ -116,7 +116,7 @@ def main():
         pin_memory  = True
     )
 
-    # Dispositivo (cuenta con tu RTX 3060)
+    # Dispositivo 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     cudnn.benchmark = True
     print("Usando dispositivo:", device)
