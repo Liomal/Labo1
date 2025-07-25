@@ -30,7 +30,7 @@ train_df = pd.read_csv(train_labels_file)
 print("Leyendo etiquetas de validación...")
 val_df   = pd.read_csv(val_labels_file)
 
-# Subconjunto recomendado para SVM (memoria y tiempo)
+# Subconjunto SVM
 train_df = train_df.sample(5000, random_state=42)
 val_df   = val_df.sample(1000, random_state=42)
 
