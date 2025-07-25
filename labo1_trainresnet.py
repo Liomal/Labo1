@@ -173,12 +173,6 @@ def main():
     model.fc    = nn.Linear(in_features, num_classes)
     model       = model.to(device)
 
-    # Congelar todo menos la última capa (opcional)
-    #for param in model.parameters():
-    #    param.requires_grad = False
-    #for param in model.fc.parameters():
-    #    param.requires_grad = True
-
     # Pérdida, optimizador y scheduler
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(model.parameters(), lr=lr, momentum=0.9, weight_decay=1e-4)
