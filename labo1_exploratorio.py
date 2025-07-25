@@ -22,7 +22,7 @@ train_df, val_df = train_test_split(
 )
 print(f"\nTraining: {len(train_df)} imágenes\nValidation: {len(val_df)} imágenes")
 
-# 4. Visualizar N ejemplos por clase (por ejemplo 3)
+# 4. Visualizar N ejemplos por clase
 n_examples = 3
 classes    = sorted(labels_df["label"].unique())
 fig, axes = plt.subplots(len(classes), n_examples, figsize=(n_examples*2, len(classes)*2))
