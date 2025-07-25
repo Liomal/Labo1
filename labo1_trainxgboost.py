@@ -14,7 +14,7 @@ class TQDMCallback(TrainingCallback):
         self.pbar = tqdm(total=total_rounds, desc="Boosting Rounds")
     def after_iteration(self, model, epoch: int, evals_log: dict) -> bool:
         self.pbar.update(1)
-        return False  # False = continuar entrenamiento
+        return False  
     def after_training(self, model):
         self.pbar.close()
         return model
