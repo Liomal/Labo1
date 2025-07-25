@@ -1,5 +1,3 @@
-# labo1_trainmlp.py
-
 import os
 import random
 import numpy as np
