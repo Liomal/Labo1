@@ -1,0 +1,3 @@
+results/*
+!results/graficas/
+!results/graficas/**
